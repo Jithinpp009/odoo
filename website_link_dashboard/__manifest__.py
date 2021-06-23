@@ -8,7 +8,9 @@
     'description': """
          User friendly website link dashboard
     """,
-
+    'images': [
+        'static/description/banner.png',
+    ],
     'author': "Jithin",
     'website': " ",
     'category': '',
@@ -19,7 +21,7 @@
         'views/dashboard_views.xml',
     ],
 
-'qweb': [
+    'qweb': [
             "static/src/xml/website_links_dashboard.xml",
         ],
 
