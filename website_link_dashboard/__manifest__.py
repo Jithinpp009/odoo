@@ -9,7 +9,7 @@
          User friendly website link dashboard
     """,
 
-    'author': "Jithin PP",
+    'author': "Jithin",
     'website': " ",
     'category': '',
     'version': '0.1',
