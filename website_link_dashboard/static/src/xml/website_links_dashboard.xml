@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="WebsiteLinkDashboardMain">
+        <div class="oh_dashboards">
+            <div class="container-fluid o_hr_dashboard">
+            </div>
+        </div>
+    </t>
+
+    <t t-name="WebsiteLinkDashboard">
+        <div class="employee_dashboard_main">
+            <div class="row main-section">
+                <div class="col-md-1 col-sm-1 dummy"></div>
+                <div class="col-sm-12 col-lg-12 dashboard" >
+                    <div class="row" style="margin:15px">
+                            <div class="col-lg-3 col-sm-3"  align="left">
+                                <img src="/logo.png?company=${object.user_id.company_id.id}"  alt="${object.user_id.company_id.name}"/>
+                            </div>
+                            <div class="col-lg-3 col-sm-3" >
+                                <table style="width:100%; border-radius:5px;">
+                                    <tr><td style="vertical-align: top;">
+                                        </td>
+                                        <td style="vertical-align: top;">
+                                            <p>
+                                                <b style="font-size: 18px;"> <t t-esc="widget.general_data.emp_data.name"/></b>
+                                                <br />
+                                                <t t-if="widget.general_data.emp_data.email">
+                                                    <i class="fa fa-envelope-o" ></i>
+                                                    <t t-esc="widget.general_data.emp_data.email"/>
+                                                <br /></t>
+                                                <t t-if="widget.general_data.emp_data.mobile">
+                                                    <i class="fa fa-phone"></i>
+                                                    <t t-esc="widget.general_data.emp_data.mobile"/>
+                                                <br /></t>
+                                                <t t-if="widget.general_data.emp_data.phone">
+                                                    <i class="fa fa-phone"></i>
+                                                    <t t-esc="widget.general_data.emp_data.phone"/>
+                                                <br /></t>
+                                                <t t-if="widget.general_data.emp_data.job">
+                                                    <i class="fa fa-briefcase"></i>
+                                                    <t t-esc="widget.general_data.emp_data.job"/>
+                                                <br /></t>
+
+                                            </p>
+                                    </td></tr>
+                                </table>
+
+                            </div>
+
+                        <div class="col-lg-6 col-sm-6"  align="right">
+                             <i class="fa fa-globe"></i>
+                            <span class="value" style="text-align:center;font-size:20pt;" ><strong>Websites</strong></span>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-sm-12 col-lg-12 dashboard" >
+                        <div class="row" style="margin:15px">
+                        <t t-foreach="widget.general_data.link" t-as="link">
+                            <div class="col-lg-3 col-xs-6 "  >
+                                <a class="value" target="_blank" t-att-href="link['link']">
+                                <div class="rad-info-box rad-txt-success " >
+                                    <span class="value" style="text-align:center;" ><t t-esc="link['name']"/></span>
+                                </div>
+                                </a>
+                            </div>
+                        </t>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </t>
+
+</templates>

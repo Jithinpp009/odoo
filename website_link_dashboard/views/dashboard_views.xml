@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+
+        <record id="website_link_action_dashboard" model="ir.actions.client">
+            <field name="name">Website Link</field>
+            <field name="tag">website_link_dashboard</field>
+        </record>
+
+    </data>
+
+    <template id="assets_backend" name="reception Dashboard assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/website_link_dashboard/static/src/js/website_links_dashboard.js"/>
+            <link rel="stylesheet" href="/website_link_dashboard/static/src/css/dashboard.css"/>
+        </xpath>
+    </template>
+
+    <!--       website links-->
+        <record id="action_website_link" model="ir.actions.act_window">
+            <field name="name">Links</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">website.link</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    <menuitem name="Website Links" id="menu_website_link" action="action_website_link" sequence="10" parent="base.menu_administration" />
+    <menuitem id="menu_tw_website_link" name="Website Links"  action="website_link_action_dashboard"  sequence="10" />
+
+</odoo>
