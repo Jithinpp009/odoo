@@ -23,5 +23,8 @@
     'qweb': [
             "static/src/xml/website_links_dashboard.xml",
         ],
-
+    'license': 'AGPL-3',
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
