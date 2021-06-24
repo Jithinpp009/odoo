@@ -12,7 +12,6 @@
         'static/description/banner.png',
     ],
     'author': "Jithin",
-    'website': " ",
     'category': '',
     'version': '0.1',
     'depends': ['base', 'hr'],
