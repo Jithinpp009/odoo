@@ -12,7 +12,7 @@
         'static/description/banner.png',
     ],
     'author': "Jithin",
-    'category': '',
+    'category': 'Tools',
     'version': '0.1',
     'depends': ['base', 'hr'],
     'data': [
